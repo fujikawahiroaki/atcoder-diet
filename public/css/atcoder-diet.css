@@ -1,0 +1,47 @@
+body {
+  font-family: 'Dela Gothic One', serif;
+  font-size: 25px;
+  color: black;
+  margin: 10px;
+  background: linear-gradient(#c9171e, #fcd575);
+  height: 120vh;
+  text-align: center;
+}
+
+input {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 20pt;
+}
+
+p {
+  margin: 30px;
+}
+
+.submit {
+  font-family: 'Dela Gothic One', serif;
+}
+
+.calorie-num {
+  font-family: 'Dela Gothic One', serif;
+  font-size: 60pt;
+}
+
+.calorie-unit {
+  font-family: 'Dela Gothic One', serif;
+  font-size: 30pt;
+}
+
+header {
+  padding-bottom: 10px;
+  border-bottom: solid 1px black;
+  font-family: "Dela Gothic One";
+  font-size: 4em;
+  text-align: center;
+}
+
+footer {
+  margin: 20px;
+  border-top: solid 1px black;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 15pt;
+}

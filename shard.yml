@@ -1,0 +1,24 @@
+name: atcoder-diet
+version: 0.1.0
+
+authors:
+  - fujikawahiroaki <fhir0aki3@gmail.com>
+
+targets:
+  atcoder-diet:
+    main: src/atcoder-diet.cr
+
+crystalline:
+  main: src/atcoder-diet.cr
+
+crystal: 1.6.2
+
+license: MIT
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+  spec-kemal:
+    github: kemalcr/spec-kemal
+  dotenv:
+    github: drum445/dotenv
