@@ -1,18 +1,15 @@
 # atcoder-diet
 
-TODO: Write a description here
+AtCoderで前日にACした問題の点数の合計から当日に摂取可能なカロリーを決定するクソWebアプリ
+Crystal言語およびKemalフレームワークで作成
+ごく小規模なアプリなのでフロントエンドは分離せずECR製
 
 ## Installation
 
-TODO: Write installation instructions here
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
+Crystal言語はインストール済みとする
+このリポジトリをクローンした上で
+cd atcoder-diet
+shards install
 
 ## Contributing
 
