@@ -1,11 +1,15 @@
 body {
   font-family: 'Dela Gothic One', serif;
-  font-size: 25px;
+  font-size: 30px;
   color: black;
   margin: 10px;
   background: linear-gradient(#c9171e, #fcd575);
-  height: 130vh;
+  background-repeat: no-repeat;
   text-align: center;
+}
+
+h1 {
+  font-size: 40px;
 }
 
 input {
