@@ -14,6 +14,7 @@ module AtCoderDiet
         render "public/index.html.ecr", "public/layout.html.ecr"
       end
       post "/" do |env|
+        Time.local Time::Location.load("Asia/Tokyo")
         atcoder_id = env.params.body["atcoder_id"].as(String)
         today_allowed_calorie = GetAcDataFromAtCoderProblems.calc_today_allowed_calorie(atcoder_id) 
         today_allowed_calorie = 1000i64 > today_allowed_calorie ? 1000i64 : today_allowed_calorie

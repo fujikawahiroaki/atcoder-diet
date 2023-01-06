@@ -1,4 +1,5 @@
 require "http/client"
+require "kemal"
 require "json"
 
 module GetAcDataFromAtCoderProblems
@@ -40,6 +41,7 @@ module GetAcDataFromAtCoderProblems
   # 当日に解いた問題のスコアから翌日の摂取可能カロリーを返す
   def calc_tomorrow_allowed_calorie(user_id : String) : Int64
     Time.local Time::Location.load("Asia/Tokyo")
+    Log.info { "calc_tomorrow today_start: #{Time.local.at_beginning_of_day}"}
     ac_data = get_ac_data(user_id, Time.local.at_beginning_of_day.to_unix)
     if ac_data
       return ac_data.sum { |a| a["point"] }
@@ -51,6 +53,7 @@ module GetAcDataFromAtCoderProblems
   # 前日に解いた問題のスコアから当日の摂取可能カロリーを返す
   def calc_today_allowed_calorie(user_id : String) : Int64
     Time.local Time::Location.load("Asia/Tokyo")
+    Log.info { "calc_today today_start: #{Time.local.at_beginning_of_day}"}
     beginning_today = Time.local.at_beginning_of_day.to_unix
     beginning_yesterday = beginning_today - (60i64 * 60 * 24)
     today_day = Time.local.day
