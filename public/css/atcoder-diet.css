@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 50px;
 }
 
 input {
@@ -39,7 +39,7 @@ header {
   padding-bottom: 10px;
   border-bottom: solid 1px black;
   font-family: "Dela Gothic One";
-  font-size: 4em;
+  font-size: 100px;
   text-align: center;
 }
 
