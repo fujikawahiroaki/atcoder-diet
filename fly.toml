@@ -6,10 +6,11 @@ kill_timeout = 5
 processes = []
 
 [build]
-  image = "flyio/hellofly:latest"
+  image = "fujikawahiroaki/crystal-kemal:latest"
 
 [env]
-  KEMAL_ENV=production
+  KEMAL_ENV="production"
+  PORT=8080
 
 [experimental]
   allowed_public_ports = []
@@ -17,7 +18,7 @@ processes = []
 
 [[services]]
   http_checks = []
-  internal_port = 3000 
+  internal_port = 8080 
   processes = ["app"]
   protocol = "tcp"
   script_checks = []

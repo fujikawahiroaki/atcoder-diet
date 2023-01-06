@@ -29,7 +29,7 @@ module AtCoderDiet
 
     def serve
       self.set_route
-      Kemal.run
+      Kemal.run port: 8080
     end
   end
 end

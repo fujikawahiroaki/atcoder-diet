@@ -12,10 +12,10 @@ WORKDIR /app
 
 RUN shards install
 
-RUN crystal build --release src/atcoder-diet.cr
+RUN shards build --release 
 
 RUN crystal spec
 
-EXPOSE 3000
+EXPOSE 8080 
 
-CMD ./app
+CMD ./bin/atcoder-diet
