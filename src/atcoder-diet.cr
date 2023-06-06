@@ -16,10 +16,8 @@ module AtCoderDiet
       post "/" do |env|
         Time.local Time::Location.load("Asia/Tokyo")
         atcoder_id = env.params.body["atcoder_id"].as(String)
-        today_allowed_calorie = GetAcDataFromAtCoderProblems.calc_today_allowed_calorie(atcoder_id) 
-        today_allowed_calorie = 1000i64 > today_allowed_calorie ? 1000i64 : today_allowed_calorie
-        tomorrow_allowed_calorie = GetAcDataFromAtCoderProblems.calc_tomorrow_allowed_calorie(atcoder_id)
-        tomorrow_allowed_calorie = 1000i64 > tomorrow_allowed_calorie ? 1000i64 : tomorrow_allowed_calorie
+        today_allowed_calorie = 2000i64 + GetAcDataFromAtCoderProblems.calc_today_allowed_calorie(atcoder_id) 
+        tomorrow_allowed_calorie = 2000i64 + GetAcDataFromAtCoderProblems.calc_tomorrow_allowed_calorie(atcoder_id)
         render "public/result.html.ecr", "public/layout.html.ecr"
       end
       get "/*" do |env|
